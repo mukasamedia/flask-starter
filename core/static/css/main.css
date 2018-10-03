@@ -1,0 +1,4 @@
+/* Hide the notifcation (alert) */
+.is-hidden {
+  display: none;
+}
