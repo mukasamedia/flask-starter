@@ -1,0 +1,8 @@
+[flake8]
+
+ignore = 
+  E111, E114, E121
+exclude = 
+  .git
+  __pycache__
+  __init__.py

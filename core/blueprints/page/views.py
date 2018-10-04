@@ -2,6 +2,7 @@ from flask import Blueprint, render_template
 
 page = Blueprint('page', __name__, template_folder='templates')
 
+
 @page.route('/')
 def home():
   """
@@ -11,6 +12,7 @@ def home():
   """
   return render_template('page/home.html')
 
+
 @page.route('/terms')
 def terms():
   """
@@ -19,6 +21,7 @@ def terms():
   :return: Application terms page
   """
   return render_template('page/terms.html')
+
 
 @page.route('/privacy')
 def privacy():

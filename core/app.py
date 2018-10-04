@@ -2,7 +2,8 @@ from flask import Flask
 
 from .blueprints.page import page
 
-def create_app():
+
+def create_app(settings_override=None):
   """
   Create a Flask application using the app factory pattern
 
@@ -12,8 +13,7 @@ def create_app():
   app = Flask(__name__, instance_relative_config=True)
 
   app.config.from_object('config.settings')
-  app.config.from_pyfile('settings.py', silent=True) #inside instanse (silent=True: fail silently if not found)
-
+  app.config.from_pyfile('settings.py', silent=True)
   app.register_blueprint(page)
 
   return app
